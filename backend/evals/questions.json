@@ -1,0 +1,123 @@
+[
+  {
+    "id": "router-rollback-steps",
+    "question": "What is the rollback procedure for a failed edge router firmware upgrade?",
+    "expected_source": "NET-SOP-104",
+    "expected_keywords": ["previous signed firmware", "checksum", "routing adjacencies", "change record"]
+  },
+  {
+    "id": "router-rollback-trigger",
+    "question": "When should we trigger an edge router firmware rollback?",
+    "expected_source": "NET-SOP-104",
+    "expected_keywords": ["fails to boot twice", "critical interfaces", "routing adjacencies"]
+  },
+  {
+    "id": "bgp-soft-reset",
+    "question": "How should I recover one failed BGP neighbor before considering a hard reset?",
+    "expected_source": "NET-SOP-112",
+    "expected_keywords": ["transport path", "soft reset", "watch-supervisor approval"]
+  },
+  {
+    "id": "bgp-validation",
+    "question": "How do I validate a restored BGP peer?",
+    "expected_source": "NET-SOP-112",
+    "expected_keywords": ["Established", "ten minutes", "expected prefixes", "route count"]
+  },
+  {
+    "id": "dns-cache",
+    "question": "Should we flush every DNS cache entry during resolver recovery?",
+    "expected_source": "NET-SOP-118",
+    "expected_keywords": ["affected cache entry", "full cache", "supervisor approval"]
+  },
+  {
+    "id": "dns-zone-rollback",
+    "question": "How is a faulty authoritative DNS zone rolled back?",
+    "expected_source": "NET-SOP-118",
+    "expected_keywords": ["last signed zone bundle", "increment the serial", "secondaries"]
+  },
+  {
+    "id": "vpn-recovery",
+    "question": "What are the safe steps to recover a site-to-site VPN tunnel?",
+    "expected_source": "NET-SOP-126",
+    "expected_keywords": ["peer reachability", "child security association", "IKE association"]
+  },
+  {
+    "id": "vpn-guardrails",
+    "question": "Can I weaken encryption or add an any-any rule to restore the IPsec tunnel?",
+    "expected_source": "NET-SOP-126",
+    "expected_keywords": ["Never disable certificate validation", "reduce encryption strength", "any-any rule"]
+  },
+  {
+    "id": "loop-containment",
+    "question": "How do we contain a suspected layer 2 switching loop?",
+    "expected_source": "NET-SOP-132",
+    "expected_keywords": ["affected VLAN", "Administratively disable", "broadcast rate"]
+  },
+  {
+    "id": "firewall-reversion",
+    "question": "How do I revert one bad emergency firewall rule without undoing other updates?",
+    "expected_source": "NET-SOP-141",
+    "expected_keywords": ["only the changed rule", "policy syntax", "standby member"]
+  },
+  {
+    "id": "firewall-guardrail",
+    "question": "Does an emergency permit us to use an any-any firewall rule?",
+    "expected_source": "NET-SOP-141",
+    "expected_keywords": ["Never add", "any-any permit", "Emergency change control"]
+  },
+  {
+    "id": "idp-failover",
+    "question": "What steps prevent split brain during identity provider failover?",
+    "expected_source": "SYS-SOP-205",
+    "expected_keywords": ["fenced state", "replication lag", "writable primaries"]
+  },
+  {
+    "id": "idp-validation",
+    "question": "What authentication paths are tested after identity provider failover?",
+    "expected_source": "SYS-SOP-205",
+    "expected_keywords": ["interactive login", "service-account token", "multi-factor authentication"]
+  },
+  {
+    "id": "database-restore",
+    "question": "How do we restore and validate a service database backup?",
+    "expected_source": "SYS-SOP-214",
+    "expected_keywords": ["full backup", "transaction logs", "integrity checks", "row counts"]
+  },
+  {
+    "id": "change-record",
+    "question": "What information is required in a production network change record?",
+    "expected_source": "OPS-SOP-301",
+    "expected_keywords": ["affected assets", "validation plan", "rollback trigger", "approvers"]
+  },
+  {
+    "id": "emergency-change",
+    "question": "What approvals and follow-up are required for an emergency change?",
+    "expected_source": "OPS-SOP-301",
+    "expected_keywords": ["named incident", "verbal approval", "retrospective review"]
+  },
+  {
+    "id": "incident-handoff",
+    "question": "What must happen when incident command transfers to the next watch?",
+    "expected_source": "OPS-SOP-315",
+    "expected_keywords": ["repeat back", "transfer time", "accepts command"]
+  },
+  {
+    "id": "credential-exposure",
+    "question": "What are the immediate actions for an exposed API key?",
+    "expected_source": "SEC-SOP-402",
+    "expected_keywords": ["Revoke", "replacement credential", "audit logs"]
+  },
+  {
+    "id": "time-source",
+    "question": "How should we recover from an unstable primary network time source?",
+    "expected_source": "COM-SOP-510",
+    "expected_keywords": ["designated secondary", "NTP authentication", "slew time gradually"]
+  },
+  {
+    "id": "unsupported-question",
+    "question": "What is today's cafeteria lunch menu?",
+    "expected_source": null,
+    "expected_keywords": [],
+    "should_answer": false
+  }
+]

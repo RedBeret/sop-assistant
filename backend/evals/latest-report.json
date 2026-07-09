@@ -1,0 +1,401 @@
+{
+  "generated_at": "2026-07-09T21:51:00.540744+00:00",
+  "embedding_provider": "local-hash-v1",
+  "generation_provider": "local-extractive",
+  "case_count": 20,
+  "passed": 20,
+  "pass_rate": 1.0,
+  "source_hit_rate": 1.0,
+  "average_keyword_recall": 0.933,
+  "results": [
+    {
+      "id": "router-rollback-steps",
+      "question": "What is the rollback procedure for a failed edge router firmware upgrade?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 0.75,
+      "matched_keywords": [
+        "previous signed firmware",
+        "checksum",
+        "routing adjacencies"
+      ],
+      "returned_sources": [
+        "NET-SOP-104",
+        "NET-SOP-104",
+        "NET-SOP-104",
+        "NET-SOP-104",
+        "NET-SOP-104"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "router-rollback-trigger",
+      "question": "When should we trigger an edge router firmware rollback?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "fails to boot twice",
+        "critical interfaces",
+        "routing adjacencies"
+      ],
+      "returned_sources": [
+        "NET-SOP-104",
+        "NET-SOP-104",
+        "NET-SOP-104",
+        "NET-SOP-104",
+        "NET-SOP-104"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "bgp-soft-reset",
+      "question": "How should I recover one failed BGP neighbor before considering a hard reset?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "transport path",
+        "soft reset",
+        "watch-supervisor approval"
+      ],
+      "returned_sources": [
+        "NET-SOP-112",
+        "NET-SOP-112",
+        "NET-SOP-112",
+        "SYS-SOP-214",
+        "NET-SOP-112"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "bgp-validation",
+      "question": "How do I validate a restored BGP peer?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 0.75,
+      "matched_keywords": [
+        "ten minutes",
+        "expected prefixes",
+        "route count"
+      ],
+      "returned_sources": [
+        "NET-SOP-112",
+        "NET-SOP-112",
+        "NET-SOP-112",
+        "NET-SOP-112",
+        "NET-SOP-132"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "dns-cache",
+      "question": "Should we flush every DNS cache entry during resolver recovery?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "affected cache entry",
+        "full cache",
+        "supervisor approval"
+      ],
+      "returned_sources": [
+        "NET-SOP-118",
+        "NET-SOP-118",
+        "NET-SOP-118",
+        "COM-SOP-510",
+        "NET-SOP-118"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "dns-zone-rollback",
+      "question": "How is a faulty authoritative DNS zone rolled back?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "last signed zone bundle",
+        "increment the serial",
+        "secondaries"
+      ],
+      "returned_sources": [
+        "NET-SOP-118",
+        "NET-SOP-118",
+        "NET-SOP-118",
+        "NET-SOP-118",
+        "OPS-SOP-315"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "vpn-recovery",
+      "question": "What are the safe steps to recover a site-to-site VPN tunnel?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "peer reachability",
+        "child security association",
+        "IKE association"
+      ],
+      "returned_sources": [
+        "NET-SOP-126",
+        "NET-SOP-126",
+        "NET-SOP-126",
+        "NET-SOP-126",
+        "NET-SOP-126"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "vpn-guardrails",
+      "question": "Can I weaken encryption or add an any-any rule to restore the IPsec tunnel?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "Never disable certificate validation",
+        "reduce encryption strength",
+        "any-any rule"
+      ],
+      "returned_sources": [
+        "NET-SOP-126",
+        "NET-SOP-126",
+        "NET-SOP-141",
+        "NET-SOP-141",
+        "COM-SOP-510"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "loop-containment",
+      "question": "How do we contain a suspected layer 2 switching loop?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "affected VLAN",
+        "Administratively disable",
+        "broadcast rate"
+      ],
+      "returned_sources": [
+        "NET-SOP-132",
+        "NET-SOP-132",
+        "NET-SOP-132",
+        "NET-SOP-132",
+        "SEC-SOP-402"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "firewall-reversion",
+      "question": "How do I revert one bad emergency firewall rule without undoing other updates?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "only the changed rule",
+        "policy syntax",
+        "standby member"
+      ],
+      "returned_sources": [
+        "NET-SOP-141",
+        "NET-SOP-141",
+        "NET-SOP-141",
+        "NET-SOP-141",
+        "NET-SOP-141"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "firewall-guardrail",
+      "question": "Does an emergency permit us to use an any-any firewall rule?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "Never add",
+        "any-any permit",
+        "Emergency change control"
+      ],
+      "returned_sources": [
+        "NET-SOP-141",
+        "NET-SOP-141",
+        "NET-SOP-141",
+        "NET-SOP-141",
+        "NET-SOP-126"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "idp-failover",
+      "question": "What steps prevent split brain during identity provider failover?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "fenced state",
+        "replication lag",
+        "writable primaries"
+      ],
+      "returned_sources": [
+        "SYS-SOP-205",
+        "SYS-SOP-205",
+        "SYS-SOP-205",
+        "SYS-SOP-205",
+        "SYS-SOP-205"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "idp-validation",
+      "question": "What authentication paths are tested after identity provider failover?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "interactive login",
+        "service-account token",
+        "multi-factor authentication"
+      ],
+      "returned_sources": [
+        "SYS-SOP-205",
+        "SYS-SOP-205",
+        "SYS-SOP-205",
+        "SYS-SOP-205",
+        "SYS-SOP-205"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "database-restore",
+      "question": "How do we restore and validate a service database backup?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 0.5,
+      "matched_keywords": [
+        "full backup",
+        "integrity checks"
+      ],
+      "returned_sources": [
+        "SYS-SOP-214",
+        "SYS-SOP-214",
+        "SYS-SOP-214",
+        "SYS-SOP-214",
+        "NET-SOP-118"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "change-record",
+      "question": "What information is required in a production network change record?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "affected assets",
+        "validation plan",
+        "rollback trigger",
+        "approvers"
+      ],
+      "returned_sources": [
+        "OPS-SOP-301",
+        "OPS-SOP-301",
+        "OPS-SOP-301",
+        "NET-SOP-104",
+        "OPS-SOP-301"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "emergency-change",
+      "question": "What approvals and follow-up are required for an emergency change?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "named incident",
+        "verbal approval",
+        "retrospective review"
+      ],
+      "returned_sources": [
+        "OPS-SOP-301",
+        "NET-SOP-141",
+        "OPS-SOP-301",
+        "OPS-SOP-301",
+        "NET-SOP-141"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "incident-handoff",
+      "question": "What must happen when incident command transfers to the next watch?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 0.667,
+      "matched_keywords": [
+        "transfer time",
+        "accepts command"
+      ],
+      "returned_sources": [
+        "OPS-SOP-315",
+        "OPS-SOP-315",
+        "OPS-SOP-315",
+        "OPS-SOP-315",
+        "SYS-SOP-205"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "credential-exposure",
+      "question": "What are the immediate actions for an exposed API key?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "Revoke",
+        "replacement credential",
+        "audit logs"
+      ],
+      "returned_sources": [
+        "SEC-SOP-402",
+        "SEC-SOP-402",
+        "SEC-SOP-402",
+        "NET-SOP-112",
+        "SYS-SOP-214"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "time-source",
+      "question": "How should we recover from an unstable primary network time source?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [
+        "designated secondary",
+        "NTP authentication",
+        "slew time gradually"
+      ],
+      "returned_sources": [
+        "COM-SOP-510",
+        "COM-SOP-510",
+        "COM-SOP-510",
+        "COM-SOP-510",
+        "OPS-SOP-301"
+      ],
+      "grounded": true
+    },
+    {
+      "id": "unsupported-question",
+      "question": "What is today's cafeteria lunch menu?",
+      "passed": true,
+      "source_hit": true,
+      "keyword_recall": 1.0,
+      "matched_keywords": [],
+      "returned_sources": [],
+      "grounded": false
+    }
+  ]
+}
